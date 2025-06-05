@@ -1,0 +1,412 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="Hand">
+    <link name="base_link">
+        <inertial>
+            <origin xyz="0 0 -1.0" rpy="0.0 0.0 0.0" />
+            <mass value="0.5100349823948467" />
+            <inertia ixx="0.0008264391413677037" iyy="0.0006620165894960207" izz="0.00032072896517467504" ixy="-7.216347413324594e-05" iyz="-1.524717920817281e-05" ixz="-1.6330394397429294e-05" />
+        </inertial>
+        <visual name="base_link_visual">
+            <origin xyz="0.0 0.0 -1.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/base_link.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="base_link_collision">
+            <origin xyz="0.0 0.0 -1.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/base_link.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="top3">
+        <inertial>
+            <origin xyz="0.012722847422286049 -0.00128694174633178 0.010404489905321376" rpy="0.0 -1.3444106938820257e-17 0.0" />
+            <mass value="0.015457680314432174" />
+            <inertia ixx="1.3767339255469641e-06" iyy="2.0192602348552422e-06" izz="1.5080128355590018e-06" ixy="-1.2928118516762063e-07" iyz="-1.7465017772232958e-07" ixz="-6.883034222103327e-07" />
+        </inertial>
+        <visual name="top3_visual">
+            <origin xyz="-0.9826602197979958 -0.27911686466524055 -0.4586221621519428" rpy="-2.821296675084833 -0.8814906431629753 3.0671544154857164" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/top3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="top3_collision">
+            <origin xyz="-0.9826602197979958 -0.27911686466524055 -0.4586221621519428" rpy="-2.821296675084833 -0.8814906431629753 3.0671544154857164" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/top3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="middle2">
+        <inertial>
+            <origin xyz="0.009897910365367081 -0.0019495856220897291 0.008051387989834789" rpy="2.7755575615628914e-17 -1.0755285551056204e-16 -1.3877787807814457e-17" />
+            <mass value="0.012894076039031952" />
+            <inertia ixx="1.2383161774340025e-06" iyy="1.770745435866814e-06" izz="1.2535590070501384e-06" ixy="-1.0663723407389906e-07" iyz="-1.5170089516659183e-07" ixz="-5.96042439131418e-07" />
+        </inertial>
+        <visual name="middle2_visual">
+            <origin xyz="-0.8715447520348123 -0.4017387039656658 -0.5135323715609377" rpy="-2.6999739724546887 -0.7614179946547722 3.1014950946903546" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/middle2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="middle2_collision">
+            <origin xyz="-0.8715447520348123 -0.4017387039656658 -0.5135323715609377" rpy="-2.6999739724546887 -0.7614179946547722 3.1014950946903546" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/middle2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="bottom4">
+        <inertial>
+            <origin xyz="0.010811403191642423 0.00224597862022923 -0.01564084176257158" rpy="0.0 -5.854691731421724e-18 3.469446951953614e-18" />
+            <mass value="0.03121668753846123" />
+            <inertia ixx="8.729715306256465e-06" iyy="1.1469907494107448e-05" izz="4.0751613499876614e-06" ixy="5.366721618331331e-07" iyz="-4.309595046802435e-07" ixz="3.816306159498013e-06" />
+        </inertial>
+        <visual name="bottom4_visual">
+            <origin xyz="-0.7039898824469819 0.03129781373543221 0.7650539139115412" rpy="0.0006105661208870561 0.5058939835595102 -3.135054182502079" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/bottom4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="bottom4_collision">
+            <origin xyz="-0.7039898824469819 0.03129781373543221 0.7650539139115412" rpy="0.0006105661208870561 0.5058939835595102 -3.135054182502079" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/bottom4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="bottom5">
+        <inertial>
+            <origin xyz="0.008387131224167304 0.0023328620201057194 -0.010796235093659332" rpy="2.7755575615628914e-17 1.5612511283791264e-17 -6.938893903907228e-18" />
+            <mass value="0.022067815971275464" />
+            <inertia ixx="5.1544258047036e-06" iyy="6.8385225449267365e-06" izz="2.436128476108711e-06" ixy="3.6456796451971264e-07" iyz="-3.069038826270734e-07" ixz="2.311217830557317e-06" />
+        </inertial>
+        <visual name="bottom5_visual">
+            <origin xyz="-0.6807272860259849 -0.06007375942433248 0.7705833693382032" rpy="-0.11178738593831096 0.49368468926477677 -3.135434766464421" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/bottom5.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="bottom5_collision">
+            <origin xyz="-0.6807272860259849 -0.06007375942433248 0.7705833693382032" rpy="-0.11178738593831096 0.49368468926477677 -3.135434766464421" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/bottom5.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="middle4">
+        <inertial>
+            <origin xyz="0.008904628907913157 -0.0023792700350409235 0.009796418079486892" rpy="-1.7347234759768075e-18 3.6730736724735486e-17 0.0" />
+            <mass value="0.015555655288689765" />
+            <inertia ixx="1.8169687685419424e-06" iyy="2.301963124214806e-06" izz="1.3886711238762299e-06" ixy="-5.963028569079452e-08" iyz="-1.4456990212619745e-07" ixz="-7.177123697304761e-07" />
+        </inertial>
+        <visual name="middle4_visual">
+            <origin xyz="-0.8981125742970325 -0.16224186999271287 -0.5842122409040806" rpy="-2.9761268465236808 -0.7551383132902398 3.086243328301658" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/middle4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="middle4_collision">
+            <origin xyz="-0.8981125742970325 -0.16224186999271287 -0.5842122409040806" rpy="-2.9761268465236808 -0.7551383132902398 3.086243328301658" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/middle4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="bottom3">
+        <inertial>
+            <origin xyz="0.013150412773647528 0.0017898924662042438 -0.016454167338748386" rpy="0.0 -4.77048955893622e-17 0.0" />
+            <mass value="0.033922844690294" />
+            <inertia ixx="9.475880307975722e-06" iyy="1.3211205775148363e-05" izz="5.291106614505465e-06" ixy="7.785935345204304e-07" iyz="-6.514017184390998e-07" ixz="4.784597843700844e-06" />
+        </inertial>
+        <visual name="bottom3_visual">
+            <origin xyz="-0.7127987562873164 0.18352940499571319 0.744599577650552" rpy="0.17202564981256852 0.5148485227284503 -3.1348392594323253" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/bottom3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="bottom3_collision">
+            <origin xyz="-0.7127987562873164 0.18352940499571319 0.744599577650552" rpy="0.17202564981256852 0.5148485227284503 -3.1348392594323253" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/bottom3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="bottom2">
+        <inertial>
+            <origin xyz="0.011607949282749832 0.002018514424223734 -0.014723463122190965" rpy="-5.551115123125784e-17 4.8572257327350605e-17 -1.387778780781446e-17" />
+            <mass value="0.027465568394231393" />
+            <inertia ixx="5.723367108825129e-06" iyy="8.390834206638332e-06" izz="3.839477878394764e-06" ixy="5.154900593173449e-07" iyz="-5.137574394737419e-07" ixz="3.0787847825931942e-06" />
+        </inertial>
+        <visual name="bottom2_visual">
+            <origin xyz="-0.6992500006784795 0.3378983479685196 0.7042349780325489" rpy="0.35043295932862323 0.5150946878028021 -3.134833725138547" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/bottom2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="bottom2_collision">
+            <origin xyz="-0.6992500006784795 0.3378983479685196 0.7042349780325489" rpy="0.35043295932862323 0.5150946878028021 -3.134833725138547" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/bottom2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="top4">
+        <inertial>
+            <origin xyz="0.010549139605718771 -0.0019865220204782676 0.010271658711580934" rpy="0.0 5.155720143347475e-17 -4.336808689942018e-19" />
+            <mass value="0.013310515404494102" />
+            <inertia ixx="1.212129520237912e-06" iyy="1.6172615704585132e-06" izz="1.1065835046493355e-06" ixy="-5.585709035649865e-08" iyz="-1.3579006402603228e-07" ixz="-5.485899176994765e-07" />
+        </inertial>
+        <visual name="top4_visual">
+            <origin xyz="-0.9793509683457786 -0.19789376621583887 -0.4806710188165299" rpy="-2.9070597443918897 -0.8763543350248644 3.0486591715302844" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/top4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="top4_collision">
+            <origin xyz="-0.9793509683457786 -0.19789376621583887 -0.4806710188165299" rpy="-2.9070597443918897 -0.8763543350248644 3.0486591715302844" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/top4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="top1">
+        <inertial>
+            <origin xyz="-0.012157896215772875 -0.008204726076153754 -0.006769146817400693" rpy="0.0 -5.551115123125784e-17 -5.551115123125784e-17" />
+            <mass value="0.019954580010062253" />
+            <inertia ixx="1.4509862773937772e-06" iyy="2.9414096881953024e-06" izz="2.846923228144692e-06" ixy="-5.926966252394887e-07" iyz="-2.590373933094085e-07" ixz="-4.600128771796429e-07" />
+        </inertial>
+        <visual name="top1_visual">
+            <origin xyz="0.31105317131862736 0.7483137335006705 0.4933879494934668" rpy="0.9038861888392605 -1.0148931900481832 -3.141592653154538" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/top1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="top1_collision">
+            <origin xyz="0.31105317131862736 0.7483137335006705 0.4933879494934668" rpy="0.9038861888392605 -1.0148931900481832 -3.141592653154538" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/top1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="middle1">
+        <inertial>
+            <origin xyz="-0.011420169791564518 0.004248100995531532 0.010150499612784173" rpy="5.551115123125784e-17 5.551115123125783e-17 0.0" />
+            <mass value="0.03381363911413602" />
+            <inertia ixx="5.331797271140053e-06" iyy="1.1966282189119098e-05" izz="1.074353962055799e-05" ixy="1.6085547894548185e-06" iyz="-2.3677503570863726e-07" ixz="3.807882296273688e-06" />
+        </inertial>
+        <visual name="middle1_visual">
+            <origin xyz="0.4039031114199423 -0.7347273080629885 -0.5375032123922654" rpy="-2.2377064667889512 1.0148931896685192 -3.141592653275962" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/middle1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="middle1_collision">
+            <origin xyz="0.4039031114199423 -0.7347273080629885 -0.5375032123922654" rpy="-2.2377064667889512 1.0148931896685192 -3.141592653275962" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/middle1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="top5">
+        <inertial>
+            <origin xyz="0.006930764203473916 -0.003411427648764822 0.008111912489469556" rpy="0.0 6.591949208711867e-17 6.938893903907228e-18" />
+            <mass value="0.006361644328949596" />
+            <inertia ixx="3.9472716943438824e-07" iyy="4.5599028551733524e-07" izz="3.138960134866866e-07" ixy="6.501984990174955e-09" iyz="-2.8796465862774348e-08" ixz="-1.3949874886430878e-07" />
+        </inertial>
+        <visual name="top5_visual">
+            <origin xyz="-0.9574646970815393 -0.05283951950985741 -0.5155866399551612" rpy="-3.0866854775642074 -0.8592967499348987 3.067535967295966" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/top5.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="top5_collision">
+            <origin xyz="-0.9574646970815393 -0.05283951950985741 -0.5155866399551612" rpy="-3.0866854775642074 -0.8592967499348987 3.067535967295966" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/top5.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="middle5">
+        <inertial>
+            <origin xyz="0.008169789311035585 -0.002909390967438461 0.010806742385068015" rpy="0.0 1.0408340855860843e-17 0.0" />
+            <mass value="0.01033080253467171" />
+            <inertia ixx="1.1045985679062774e-06" iyy="1.3078463529281819e-06" izz="6.275960820679677e-07" ixy="-1.0082647603562371e-08" iyz="-6.256522861975528e-08" ixz="-4.0237240194382075e-07" />
+        </inertial>
+        <visual name="middle5_visual">
+            <origin xyz="-0.8744704852903972 -0.018548161358261202 -0.6086957463796747" rpy="3.1329123390534406 -0.7385629854566068 3.101205379775466" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/middle5.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="middle5_collision">
+            <origin xyz="-0.8744704852903972 -0.018548161358261202 -0.6086957463796747" rpy="3.1329123390534406 -0.7385629854566068 3.101205379775466" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/middle5.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="top2">
+        <inertial>
+            <origin xyz="0.011014375874718745 6.264344129254918e-05 -0.00806644357987338" rpy="0.0 1.0408340855860844e-17 1.387778780781446e-17" />
+            <mass value="0.011905398426448093" />
+            <inertia ixx="9.10742131672382e-07" iyy="1.284609959150117e-06" izz="1.0853447933981294e-06" ixy="1.4528681231121873e-07" iyz="-1.648175681455327e-07" ixz="4.2560882942161996e-07" />
+        </inertial>
+        <visual name="top2_visual">
+            <origin xyz="-0.9409475077166651 0.4371033172282726 0.40029678085112863" rpy="0.5115209459684782 0.8826221153351123 -3.064082137820175" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/top2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="top2_collision">
+            <origin xyz="-0.9409475077166651 0.4371033172282726 0.40029678085112863" rpy="0.5115209459684782 0.8826221153351123 -3.064082137820175" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/top2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="middle3">
+        <inertial>
+            <origin xyz="0.009857993358788493 -0.002100055755200882 0.009277878034300314" rpy="1.387778780781446e-17 1.3877787807814457e-17 0.0" />
+            <mass value="0.015234214046454133" />
+            <inertia ixx="1.6150815299867322e-06" iyy="2.2103239389346437e-06" izz="1.454809341142644e-06" ixy="-1.1587163608969487e-07" iyz="-1.5198922571722893e-07" ixz="-7.048813261847734e-07" />
+        </inertial>
+        <visual name="middle3_visual">
+            <origin xyz="-0.9037768126959767 -0.24112480010381226 -0.5674327143979564" rpy="-2.8907236361993673 -0.7601794525405453 3.10420380787357" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/middle3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="middle3_collision">
+            <origin xyz="-0.9037768126959767 -0.24112480010381226 -0.5674327143979564" rpy="-2.8907236361993673 -0.7601794525405453 3.10420380787357" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/middle3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="bottom1">
+        <inertial>
+            <origin xyz="0.0005973884046416278 -0.0017242438082320977 -0.0030832592451406527" rpy="0.0 -0.0 0.0" />
+            <mass value="0.07696041767298693" />
+            <inertia ixx="2.4595062918152514e-05" iyy="1.5389819558617336e-05" izz="1.995341090815976e-05" ixy="3.333461964349967e-08" iyz="-2.9695765612445345e-06" ixz="-2.2798451643477474e-07" />
+        </inertial>
+        <visual name="bottom1_visual">
+            <origin xyz="-0.24985228238813448 0.9592937271883543 -0.02285108527303292" rpy="1.6042586594408124 0.056674012244977826 3.141592653589777" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/bottom1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="bottom1_collision">
+            <origin xyz="-0.24985228238813448 0.9592937271883543 -0.02285108527303292" rpy="1.6042586594408124 0.056674012244977826 3.141592653589777" />
+            <geometry>
+                <mesh filename="package://hand_model/meshes/bottom1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="middle1_KU" type="revolute">
+        <origin xyz="-0.03329051154604715 0.0056691735454671216 0.01653561085114117" rpy="-3.141592653063359 -1.2706263818884622e-10 8.473695078947685e-10" />
+        <parent link="middle1" />
+        <child link="top1" />
+        <axis xyz="-0.4482497018934469 0.5277107705976627 0.7215215426642902" />
+        <limit lower="-0.436332" upper="0.959931" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="bottom1_KU-1" type="revolute">
+        <origin xyz="-0.006497886716454855 -0.006410248046921181 -0.014720017145413343" rpy="2.074616359114212 -0.7454741924566871 0.8406473095198495" />
+        <parent link="bottom1" />
+        <child link="middle1" />
+        <axis xyz="0.44824970135460235 0.5277107705976621 0.7215215429990511" />
+        <limit lower="-0.698132" upper="0.349066" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="middle2_WS" type="revolute">
+        <origin xyz="0.01757691207037645 0.0038119863486658014 0.017193865823785542" rpy="3.141592653589224 1.8521600919640946e-11 1.9491352976075405e-13" />
+        <parent link="middle2" />
+        <child link="top2" />
+        <axis xyz="0.3086937049153848 0.9452355704536225 0.10600674689296266" />
+        <limit lower="-0.261799" upper="0.785398" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="bottom2_WS-1" type="revolute">
+        <origin xyz="0.024404982997250312 -0.0042095873336433255 -0.03331865718372294" rpy="3.1277399914537827 0.00031330805782778373 -0.00474083187541125" />
+        <parent link="bottom2" />
+        <child link="middle2" />
+        <axis xyz="-0.3086937049136056 0.9452355704536223 0.10600674689814193" />
+        <limit lower="-1.832596" upper="0.261799" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="middle3_SR" type="revolute">
+        <origin xyz="0.017732530552521962 0.0035951035258957225 0.019759178922811184" rpy="-6.613598557692062e-13 8.288238151354934e-12 2.2526772114339627e-13" />
+        <parent link="middle3" />
+        <child link="top3" />
+        <axis xyz="-0.30936974866566325 0.9450500314132643 0.10569007787551517" />
+        <limit lower="-0.785398" upper="0.261799" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="bottom3_SR-1" type="revolute">
+        <origin xyz="0.027113581494251252 -0.0044499533662446114 -0.03906302519820173" rpy="3.1175634119524456 -0.0009293645095261525 -0.008187776742866143" />
+        <parent link="bottom3" />
+        <child link="middle3" />
+        <axis xyz="-0.30936974866500017 0.9450500314132648 0.10569007787745428" />
+        <limit lower="-1.832596" upper="0.261799" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="middle4_SE" type="revolute">
+        <origin xyz="0.01594516054176924 0.002715488246833069 0.0212812910291532" rpy="-1.3028553930150015e-12 -1.1846795347828216e-11 4.373480744224168e-13" />
+        <parent link="middle4" />
+        <child link="top4" />
+        <axis xyz="-0.2926554467677516 0.9511930924005878 0.09790297557058453" />
+        <limit lower="-0.785398" upper="0.261799" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="bottom4_SE-1" type="revolute">
+        <origin xyz="0.02251236655784408 -0.0030924942642706088 -0.038217119122635576" rpy="-3.0900173621353253 0.0034809602018023365 0.017281411904359882" />
+        <parent link="bottom4" />
+        <child link="middle4" />
+        <axis xyz="-0.29265544676932753 0.9511930924005877 0.09790297556587826" />
+        <limit lower="-1.832596" upper="0.261799" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="middle5_MA" type="revolute">
+        <origin xyz="0.01283127102280088 0.0017701385228993472 0.02189366485439974" rpy="4.145073173589252e-12 9.77246235323026e-12 -1.3266610032758308e-12" />
+        <parent link="middle5" />
+        <child link="top5" />
+        <axis xyz="-0.2896063876266676 0.9526455180796969 0.09270712690240507" />
+        <limit lower="-0.785398" upper="0.261799" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="bottom5_MA-1" type="revolute">
+        <origin xyz="0.018338363889488233 -0.002505404016444679 -0.03162999156880218" rpy="-3.137586863283342 0.0004717843346659632 0.0012818862441283606" />
+        <parent link="bottom5" />
+        <child link="middle5" />
+        <axis xyz="-0.28960638762449786 0.9526455180796967 0.09270712690918398" />
+        <limit lower="-1.832596" upper="0.261799" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="base_link_MA-2" type="revolute">
+        <origin xyz="0.2603981782149085 0.010921879823065913 -0.08679743255377531" rpy="-0.18178074457398907 0.3044964966838139 3.0865397842145685" />
+        <parent link="base_link" />
+        <child link="bottom5" />
+        <axis xyz="0.2899323001194142 0.9525523908767397 0.09264336578229859" />
+        <limit lower="-0.261799" upper="1.308997" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="base_link_SE-2" type="revolute">
+        <origin xyz="0.2501169382149088 -0.00996457017693475 -0.09578142255377509" rpy="-0.06726332151535452 0.31922558195560324 3.1204545695926416" />
+        <parent link="base_link" />
+        <child link="bottom4" />
+        <axis xyz="0.29851767390210904 0.9492669453135395 0.09889305917088193" />
+        <limit lower="-0.261799" upper="1.308997" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="base_link_SR-2" type="revolute">
+        <origin xyz="0.24233605821490906 -0.03060034017693539 -0.10143916255377501" rpy="0.1115347302892938 0.3272720733741607 -3.1056047034534155" />
+        <parent link="base_link" />
+        <child link="bottom3" />
+        <axis xyz="0.3059060146466724 0.94630960509231 0.1044979944641346" />
+        <limit lower="-0.261799" upper="1.308997" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="base_link_WS-2" type="revolute">
+        <origin xyz="0.23539691821490924 -0.05171734017693605 -0.10119166255377509" rpy="0.29916110767400506 0.3157781665799975 -3.046103020646867" />
+        <parent link="base_link" />
+        <child link="bottom2" />
+        <axis xyz="0.30611319903355017 0.9462242909511116 0.10465863307683937" />
+        <limit lower="-0.261799" upper="1.308997" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="base_link_KU-2" type="continuous">
+        <origin xyz="0.24425130821490906 -0.06868508017693652 -0.04454194255377609" rpy="1.6042049742593256 -0.001895077027520721 -3.084950300279135" />
+        <parent link="base_link" />
+        <child link="bottom1" />
+        <axis xyz="0.05655307765920811 0.9983949000770433 0.0032081370641184118" />
+    </joint>
+</robot>
